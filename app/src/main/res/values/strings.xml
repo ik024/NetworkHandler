@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NetworkHandler</string>
+    <string name="online">You are online</string>
+    <string name="offline">You are offline</string>
+    <string name="posts_fetched">Posts fetched successful</string>
+    <string name="refreshing">Refreshing</string>
+</resources>

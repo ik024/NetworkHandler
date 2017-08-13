@@ -1,0 +1,67 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator_layout">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="MindValley"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom|center"
+            app:expandedTitleMarginBottom="10dp"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/tv_no_internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet"
+        android:layout_gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="visible">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+             />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_add"/>
+</android.support.design.widget.CoordinatorLayout>
