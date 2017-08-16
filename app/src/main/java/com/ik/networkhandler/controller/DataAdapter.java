@@ -79,7 +79,7 @@ class DataAdapter extends Adapter<DataAdapter.Holder> {
         }
 
         void setLikeImage(boolean likedByUser){
-            int resId = likedByUser ? R.drawable.liked : R.drawable.liked;
+            int resId = likedByUser ? R.drawable.liked : R.drawable.unlike;
             ivLike.setImageResource(resId);
         }
 
